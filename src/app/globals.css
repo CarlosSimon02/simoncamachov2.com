@@ -1,23 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* fonts */
+  --font-montserrat: var(--font-montserrat);
+  --font-satoshi: var(--font-satoshi);
+  --font-oswald: var(--font-oswald);
+
+  /* colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-montserrat: var(--font-montserrat);
-  --font-satoshi: var(--font-satoshi);
-  --font-oswald: var(--font-oswald);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
