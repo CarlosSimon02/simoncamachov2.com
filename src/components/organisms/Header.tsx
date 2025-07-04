@@ -1,6 +1,7 @@
-import ThemeToggle from "../atoms/ThemeToggle";
-import BaseContainer from "../containers/BaseContainer";
-import WebsiteLogo from "../svgs/WebsiteLogo";
+import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
+import ThemeToggle from "@/components/atoms/ThemeToggle";
+import BaseContainer from "@/components/containers/BaseContainer";
+import WebsiteLogo from "@/components/svgs/WebsiteLogo";
 
 const Header = () => {
   return (
@@ -10,7 +11,8 @@ const Header = () => {
           <div>
             <WebsiteLogo className="fill-secondary-550 size-10" />
           </div>
-          <div>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <ThemeToggle />
           </div>
         </div>

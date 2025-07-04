@@ -2,7 +2,7 @@ import Header from "@/components/organisms/Header";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
-import { hasLocale } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Montserrat, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
@@ -95,15 +95,17 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
       <body
         className={`${montserrat.variable} ${oswald.variable} ${satoshi.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
