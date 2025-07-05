@@ -1,20 +1,26 @@
 import { cn } from "@/app/utils/cn";
+import React, { JSX } from "react";
 
 type BaseContainerProps = {
   children: React.ReactNode;
   className?: string;
+  as?: keyof JSX.IntrinsicElements;
 };
 
-const BaseContainer = ({ children, className }: BaseContainerProps) => {
+const BaseContainer = ({
+  children,
+  className,
+  as: Component = "div",
+}: BaseContainerProps) => {
   return (
-    <div
+    <Component
       className={cn(
         "mx-auto w-full max-w-[90rem] px-[1rem] sm:px-[2rem] lg:px-[3rem]",
         className
       )}
     >
       {children}
-    </div>
+    </Component>
   );
 };
 

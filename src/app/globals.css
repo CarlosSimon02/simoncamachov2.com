@@ -8,11 +8,19 @@
   --font-satoshi: var(--font-satoshi);
   --font-oswald: var(--font-oswald);
 
-  /* colors */
+  /* bg */
   --color-background: var(--background);
   --color-background-2: var(--background-2);
+
+  /* fg */
   --color-foreground: var(--foreground);
   --color-foreground-2: var(--foreground-2);
+
+  /* accent */
+  --color-accent: var(--accent);
+
+  /* bg decors */
+  --color-bg-decor-text: var(--bg-decor-text);
 }
 
 :root {
@@ -20,6 +28,8 @@
   --background-2: oklch(0.9761 0 0);
   --foreground: oklch(0.3516 0.0308 243.28);
   --foreground-2: oklch(0.6395 0.0216 248.1);
+  --accent: oklch(0.6658 0.1574 58.32);
+  --bg-decor-text: oklch(0.904 0.0077 241.67);
 }
 
 .dark {
@@ -27,10 +37,22 @@
   --background-2: #oklch(0.2735 0.0179 251.92);
   --foreground: oklch(0.9756 0.0142 231.2);
   --foreground-2: oklch(0.5178 0.0208 248.3);
+  --bg-decor-text: oklch(0.2564 0.0187 285.01);
 }
 
 body {
+  @apply text-sm font-medium md:text-base;
   background: var(--background);
-  color: var(--foreground);
+  color: var(--foreground-2);
   font-family: var(--font-satoshi);
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.class-text-decor {
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--foreground);
 }
