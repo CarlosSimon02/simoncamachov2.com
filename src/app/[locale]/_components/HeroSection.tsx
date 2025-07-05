@@ -14,15 +14,20 @@ const HeroSection = ({ className }: HeroSectionProps) => {
     <ContentContainer
       className={cn(
         className,
-        "flex flex-col items-center justify-center gap-10 md:flex-row md:gap-12 lg:gap-16"
+        "flex flex-col items-center justify-center gap-16 md:flex-row md:gap-12 lg:gap-16"
       )}
     >
-      <div className="flex flex-col gap-5 md:gap-7 lg:gap-9">
-        <div className="flex items-center gap-2">
-          <MapPin className="size-4 md:size-5" />
-          <span>Pampanga, Philippines</span>
-        </div>
-        <div className="flex flex-col gap-1 md:gap-2 lg:gap-3">
+      <div className={cn("flex flex-col gap-5 md:gap-7 lg:gap-9")}>
+        <div
+          className={cn(
+            "flex flex-col gap-3 md:gap-4 lg:gap-5",
+            "after:bg-accent after:-bottom-4 after:h-1 after:w-12 after:rounded-full"
+          )}
+        >
+          <div className="flex items-center gap-2">
+            <MapPin className="size-4 md:size-5" />
+            <span>Pampanga, Philippines</span>
+          </div>
           <h1 className="font-montserrat text-accent text-[2.375rem] leading-none font-black md:text-5xl">
             Simon Camacho
           </h1>
@@ -43,7 +48,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
           </Button>
         </div>
       </div>
-      <div className="relative max-w-[31.25rem] flex-1">
+      <div className="relative max-w-[31.25rem] md:flex-1">
         <div className="relative mx-auto w-64 max-w-96 md:w-full">
           <Image
             src={heroImage.src}
