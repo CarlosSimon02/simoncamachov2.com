@@ -1,3 +1,4 @@
+import TailwindScreenIndicator from "@/components/atoms/TailwindIndicator";
 import Header from "@/components/organisms/Header";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/ThemeProvider";
@@ -104,6 +105,7 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
           >
             <Header />
             {children}
+            <TailwindScreenIndicator />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

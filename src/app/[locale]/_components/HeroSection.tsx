@@ -14,23 +14,23 @@ const HeroSection = ({ className }: HeroSectionProps) => {
     <ContentContainer
       className={cn(
         className,
-        "flex flex-col items-center justify-center gap-9"
+        "flex flex-col items-center justify-center gap-10 md:flex-row md:gap-12 lg:gap-16"
       )}
     >
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 md:gap-7 lg:gap-9">
         <div className="flex items-center gap-2">
-          <MapPin className="size-4" />
+          <MapPin className="size-4 md:size-5" />
           <span>Pampanga, Philippines</span>
         </div>
-        <div>
-          <h1 className="font-montserrat text-accent text-4xl font-black">
+        <div className="flex flex-col gap-1 md:gap-2 lg:gap-3">
+          <h1 className="font-montserrat text-accent text-[2.375rem] leading-none font-black md:text-5xl">
             Simon Camacho
           </h1>
-          <h2 className="font-oswald text-foreground text-2xl font-bold">
+          <h2 className="font-oswald text-foreground text-xl font-bold md:text-2xl">
             Software Engineer
           </h2>
         </div>
-        <p>
+        <p className="max-w-[50ch] md:max-w-[36ch]">
           I am a developer who enjoys learning and expanding knowledge in the
           field of web. I am also determined to create solutions that provide
           excellent online experiences. Explore my portfolio to see my growing
@@ -43,8 +43,8 @@ const HeroSection = ({ className }: HeroSectionProps) => {
           </Button>
         </div>
       </div>
-      <div className="relative">
-        <div className="relative w-72">
+      <div className="relative max-w-[31.25rem] flex-1">
+        <div className="relative mx-auto w-64 max-w-96 md:w-full">
           <Image
             src={heroImage.src}
             alt="Hero Image"
@@ -54,8 +54,8 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             priority
           />
         </div>
-        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 left-1/2 -z-10 -translate-x-1/2 text-center text-9xl font-bold uppercase opacity-[4%]">
-          Simon Camacho
+        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 -z-10 text-9xl font-bold uppercase opacity-[5%] max-md:left-1/2 max-md:-translate-x-1/2 max-md:text-center md:text-[10rem]">
+          Carlos <span className="text-[10rem] md:text-[12rem]">Simon</span>
         </div>
       </div>
     </ContentContainer>
