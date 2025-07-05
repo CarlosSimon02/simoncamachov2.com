@@ -20,7 +20,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
       <div className={cn("flex flex-col gap-5 md:gap-7 lg:gap-9")}>
         <div
           className={cn(
-            "flex flex-col gap-3 md:gap-4 lg:gap-5",
+            "flex flex-col gap-3",
             "after:bg-accent after:-bottom-4 after:h-1 after:w-12 after:rounded-full"
           )}
         >
