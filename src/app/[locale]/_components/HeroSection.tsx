@@ -1,8 +1,8 @@
 import heroImage from "@/app/assets/images/hero.png";
+import MapPin from "@/app/assets/svgs/mapPin.svg";
 import { cn } from "@/app/utils/cn";
 import Button from "@/components/base/Button";
 import ContentContainer from "@/components/containers/ContentContainer";
-import { MapPin } from "lucide-react";
 import Image from "next/image";
 
 type HeroSectionProps = {
@@ -24,8 +24,8 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             "after:bg-accent after:-bottom-4 after:h-1 after:w-12 after:rounded-full"
           )}
         >
-          <div className="flex items-center gap-2">
-            <MapPin className="size-4 md:size-5" />
+          <div className="flex items-center gap-1">
+            <MapPin className="stroke-foreground-2 size-5" />
             <span>Pampanga, Philippines</span>
           </div>
           <h1 className="font-montserrat text-accent text-[2.375rem] leading-none font-black md:text-5xl">
@@ -59,7 +59,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             priority
           />
         </div>
-        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 -z-10 text-9xl font-bold uppercase opacity-[5%] max-md:left-1/2 max-md:-translate-x-1/2 max-md:text-center md:text-[10rem]">
+        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 -z-10 text-9xl font-bold uppercase opacity-[4%] max-md:left-1/2 max-md:-translate-x-1/2 max-md:text-center md:text-[10rem]">
           Carlos <span className="text-[10rem] md:text-[12rem]">Simon</span>
         </div>
       </div>

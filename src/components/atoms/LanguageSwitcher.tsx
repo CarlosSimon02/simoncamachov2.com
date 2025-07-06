@@ -1,11 +1,11 @@
 "use client";
 
+import Globe from "@/app/assets/svgs/globe.svg";
 import { Select, SelectContent, SelectItem } from "@/components/base/Select";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Locale } from "next-intl";
 import { useTransition } from "react";
-import Globe from "../svgs/Globe";
 
 const LanguageSwitcher = () => {
   const router = useRouter();
@@ -22,7 +22,7 @@ const LanguageSwitcher = () => {
   return (
     <Select onValueChange={handleSelectChange}>
       <SelectPrimitive.Trigger>
-        <Globe className="fill-foreground-2 size-5 md:size-6" />
+        <Globe className="stroke-foreground-2 size-5 md:size-6" />
       </SelectPrimitive.Trigger>
       <SelectContent>
         <SelectItem value="en">English</SelectItem>

@@ -1,9 +1,9 @@
+import Hamburger from "@/app/assets/svgs/hamburger.svg";
+import WebsiteLogo from "@/app/assets/svgs/websiteLogo.svg";
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
 import ThemeToggle from "@/components/atoms/ThemeToggle";
 import BaseContainer from "@/components/containers/BaseContainer";
-import WebsiteLogo from "@/components/svgs/WebsiteLogo";
 import Nav from "../molecules/Nav";
-import Hamburger from "../svgs/Hamburger";
 
 const Header = () => {
   return (
@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex items-center gap-4 md:gap-6">
           <LanguageSwitcher />
           <ThemeToggle />
-          <Hamburger className="fill-foreground-2 size-6 md:hidden md:size-8" />
+          <Hamburger className="stroke-foreground-2 size-6 md:hidden md:size-8" />
         </div>
       </div>
     </BaseContainer>
