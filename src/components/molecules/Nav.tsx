@@ -27,7 +27,7 @@ const Nav = ({ className }: NavProps) => {
           <Link href="/">Projects</Link>
         </li>
         <li>
-          <Link href="/">Contact</Link>
+          <Link href="/">Connect</Link>
         </li>
       </ul>
     </nav>

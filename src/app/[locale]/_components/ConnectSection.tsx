@@ -9,7 +9,7 @@ type HeroSectionProps = {
 const HeroSection = ({ className }: HeroSectionProps) => {
   return (
     <ContentContainer className={cn(className, "flex flex-col gap-7")}>
-      <SectionTitle title="Experience" number={2} />
+      <SectionTitle title="Connect" number={4} />
     </ContentContainer>
   );
 };

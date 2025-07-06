@@ -12,6 +12,7 @@ import ShadCN from "@/app/assets/svgs/shadcn.svg";
 import Tailwind from "@/app/assets/svgs/tailwind.svg";
 import TypeScript from "@/app/assets/svgs/typescript.svg";
 import { cn } from "@/app/utils/cn";
+import SectionTitle from "@/components/atoms/SectionTitle";
 import ContentContainer from "@/components/containers/ContentContainer";
 
 const technologies = [
@@ -82,25 +83,28 @@ const technologies = [
   },
 ];
 
+const SubHeader = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <h3 className="font-oswald text-foreground mb-4 text-2xl md:mb-6 md:text-3xl">
+      {children}
+    </h3>
+  );
+};
+
 type HeroSectionProps = {
   className?: string;
 };
 
 const HeroSection = ({ className }: HeroSectionProps) => {
   return (
-    <ContentContainer className={cn(className, "flex flex-col gap-7")}>
-      <div className="relative flex items-baseline gap-2 md:gap-7 lg:gap-9">
-        <span className="font-oswald text-foreground absolute bottom-3 text-5xl font-black opacity-[10%] md:text-6xl">
-          01
-        </span>
-        <h2 className="font-montserrat text-accent text-2xl font-black md:text-3xl">
-          About Me
-        </h2>
-      </div>
-      <div className="flex flex-col gap-4 md:flex-row-reverse">
-        <div className="flex max-w-[60ch] flex-col gap-2 md:flex-1 md:flex-shrink-1 md:flex-grow-4">
-          <h3 className="font-oswald text-foreground text-xl">My Journey</h3>
-          <p>
+    <ContentContainer
+      className={cn(className, "flex flex-col gap-7 md:gap-12")}
+    >
+      <SectionTitle title="About Me" number={1} />
+      <div className="flex flex-col gap-4 md:mb-12 md:flex-row-reverse">
+        <div className="flex max-w-[60ch] flex-col md:flex-1 md:flex-shrink-1 md:flex-grow-4">
+          <SubHeader>My Journey</SubHeader>
+          <p className="text-foreground-2">
             Hi! I’m Simon. A self-taught programmer who realized code could
             build worlds—or at least, really fun retro games.
             <br />
@@ -136,7 +140,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
         <div className="h-72 w-full md:flex-1 md:flex-shrink-1 md:flex-grow-2"></div>
       </div>
       <div className="flex flex-col gap-4">
-        <h3 className="font-oswald text-foreground text-xl">My Skills</h3>
+        <SubHeader>My Skills</SubHeader>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {technologies.map((technology) => (
             <div
