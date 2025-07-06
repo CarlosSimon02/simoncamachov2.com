@@ -59,7 +59,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             priority
           />
         </div>
-        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 -z-10 text-9xl font-bold uppercase opacity-[4%] max-md:left-1/2 max-md:-translate-x-1/2 max-md:text-center md:text-[10rem]">
+        <div className="font-oswald text-foreground class-text-decor absolute bottom-16 -z-10 text-9xl font-bold uppercase opacity-[4%] max-md:left-1/2 max-md:-translate-x-1/2 max-md:text-center md:text-[10rem] dark:opacity-[2%]">
           Carlos <span className="text-[10rem] md:text-[12rem]">Simon</span>
         </div>
       </div>

@@ -98,7 +98,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
         </h2>
       </div>
       <div className="flex flex-col gap-4 md:flex-row-reverse">
-        <div className="flex max-w-[50ch] flex-col gap-2 md:flex-1">
+        <div className="flex max-w-[60ch] flex-col gap-2 md:flex-1 md:flex-shrink-1 md:flex-grow-4">
           <h3 className="font-oswald text-foreground text-xl">My Journey</h3>
           <p>
             Hi! I’m Simon. A self-taught programmer who realized code could
@@ -133,7 +133,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             sustainable, easy to maintain, and built to last.
           </p>
         </div>
-        <div className="bg-foreground/5 h-72 w-full md:flex-1"></div>
+        <div className="h-72 w-full md:flex-1 md:flex-shrink-1 md:flex-grow-2"></div>
       </div>
       <div className="flex flex-col gap-4">
         <h3 className="font-oswald text-foreground text-xl">My Skills</h3>
