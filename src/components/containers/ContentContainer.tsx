@@ -16,7 +16,7 @@ const ContentContainer = ({
   return (
     <BaseContainer
       as={as}
-      className={cn("py-8 md:py-12 lg:py-16 xl:px-28 xl:py-20", className)}
+      className={cn("py-8 md:py-12 lg:py-16 xl:px-42 xl:py-20", className)}
     >
       {children}
     </BaseContainer>
