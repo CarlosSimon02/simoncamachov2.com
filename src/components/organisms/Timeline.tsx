@@ -38,22 +38,22 @@ const Timeline = ({ className }: TimelineProps) => {
     <div className={cn(className, "flex flex-col")}>
       {experiences.map((experience) => (
         <div key={experience.title} className="relative pb-12 last:pb-0">
-          <div className="absolute top-6 left-1 h-full w-0.5 border border-l border-dashed opacity-30" />
+          <div className="absolute top-6 left-1 h-full w-0.5 border border-r-0 border-l border-dashed opacity-30" />
           <span className="relative top-6 -left-0.25 flex size-3">
             <span className="bg-foreground-2 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
             <span className="bg-foreground-2 relative inline-flex size-3 rounded-full"></span>
           </span>
-          <div className="ml-6">
-            <h3 className="font-oswald text-foreground text-2xl font-black">
+          <div className="ml-6 flex flex-col md:ml-10 md:gap-1">
+            <h3 className="font-oswald text-foreground text-2xl font-black md:text-3xl">
               {experience.title}
             </h3>
-            <h4 className="font-oswald text-lg font-black">
+            <h4 className="font-oswald text-lg font-black md:text-xl">
               @ {experience.company}
             </h4>
-            <p className="font-oswald mb-6 text-lg font-black">
+            <p className="font-oswald mb-6 text-lg font-black md:text-xl">
               {experience.date}
             </p>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 md:gap-3">
               {experience.descriptions.map((description) => (
                 <li key={description} className="flex items-start gap-2">
                   <PaperPlane className="stroke-accent size-6 flex-shrink-0" />
