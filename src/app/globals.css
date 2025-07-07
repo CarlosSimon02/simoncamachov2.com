@@ -19,9 +19,6 @@
   /* accent */
   --color-accent: var(--accent);
 
-  /* bg decors */
-  --color-bg-decor-text: var(--bg-decor-text);
-
   /* bg card */
   --color-bg-card: var(--bg-card);
 }
@@ -32,16 +29,14 @@
   --foreground: oklch(0.3368 0.0308 243.28);
   --foreground-2: oklch(0.6395 0.0216 248.1);
   --accent: oklch(0.6658 0.1574 58.32);
-  --bg-decor-text: oklch(0.904 0.0077 241.67);
   --bg-card: oklch(0.9161 0 0);
 }
 
 .dark {
-  --background: oklch(0.2478 0.0156 285.03);
-  --background-2: oklch(0.2735 0.0179 251.92);
+  --background: oklch(0.1978 0.0156 285.03);
+  --background-2: oklch(0.1378 0.0156 285.03);
   --foreground: oklch(0.9756 0.0142 231.2);
   --foreground-2: oklch(0.5178 0.0208 248.3);
-  --bg-decor-text: oklch(0.2564 0.0187 285.01);
   --bg-card: oklch(0.224 0.0158 284.91);
 }
 
@@ -60,4 +55,8 @@ html {
 .class-text-decor {
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: var(--foreground);
+}
+
+.background-triangle {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }

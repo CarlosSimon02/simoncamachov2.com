@@ -1,4 +1,5 @@
 import TailwindScreenIndicator from "@/components/atoms/TailwindIndicator";
+import Background from "@/components/organisms/Background";
 import Header from "@/components/organisms/Header";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/ThemeProvider";
@@ -103,6 +104,7 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
             enableSystem
             disableTransitionOnChange
           >
+            <Background />
             <Header />
             {children}
             <TailwindScreenIndicator />
