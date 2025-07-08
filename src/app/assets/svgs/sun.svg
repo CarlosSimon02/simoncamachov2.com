@@ -1,6 +1,10 @@
-<svg viewBox="0 0 24 24" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+<svg aria-hidden="true"
+  class="h-[var(--size,100%)] w-[var(--size,100%)] transition-transform group-hover:translate-y-1"
+  fill="currentcolor" focusable="false" stroke="currentcolor" viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg" style="--size:1.5rem"
+  data-astro-source-file="C:/Users/caloy/OneDrive/Documents/Projects/Github/simoncamacho.com/src/components/atoms/Icon.astro"
+  data-astro-source-loc="20:2">
   <path
-    d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z"
-    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="none" fill="none" />
+    d="M128 32V56M195.883 60.1173L178.912 77.088M224 128H200M195.883 195.883L178.912 178.912M128 200V224M77.088 178.912L60.1173 195.883M56 128H32M77.088 77.088L60.1173 60.1173M168 128C168 138.609 163.786 148.783 156.284 156.284C148.783 163.786 138.609 168 128 168C117.391 168 107.217 163.786 99.7157 156.284C92.2143 148.783 88 138.609 88 128C88 117.391 92.2143 107.217 99.7157 99.7157C107.217 92.2143 117.391 88 128 88C138.609 88 148.783 92.2143 156.284 99.7157C163.786 107.217 168 117.391 168 128Z"
+    stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
 </svg>
-  

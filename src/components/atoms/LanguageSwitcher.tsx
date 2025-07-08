@@ -22,7 +22,7 @@ const LanguageSwitcher = () => {
   return (
     <Select onValueChange={handleSelectChange}>
       <SelectPrimitive.Trigger>
-        <Globe className="stroke-foreground-2 size-5 md:size-6" />
+        <Globe className="stroke-foreground size-7" />
       </SelectPrimitive.Trigger>
       <SelectContent>
         <SelectItem value="en">English</SelectItem>

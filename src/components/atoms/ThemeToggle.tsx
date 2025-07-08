@@ -12,8 +12,8 @@ const ThemeToggle = () => {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="relative"
     >
-      <Moon className="stroke-foreground-2 absolute size-5 scale-100 rotate-0 transition-all md:size-6 dark:scale-0 dark:-rotate-90" />
-      <Sun className="stroke-foreground-2 size-5 scale-0 rotate-90 transition-all md:size-6 dark:scale-100 dark:rotate-0" />
+      <Moon className="stroke-foreground absolute size-7 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+      <Sun className="stroke-foreground size-7 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
       <span className="sr-only">Toggle theme</span>
     </button>
   );
