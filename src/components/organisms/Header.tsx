@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex items-center gap-4 md:gap-6">
           <LanguageSwitcher />
           <ThemeToggle />
-          <Hamburger className="fill-foreground size-7 md:hidden" />
+          <Hamburger className="fill-foreground size-6 md:hidden" />
         </div>
       </div>
     </BaseContainer>
