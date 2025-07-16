@@ -1,4 +1,4 @@
-import { cn } from "@/app/utils/cn";
+import { cn } from "@/app/utils";
 import React, { JSX } from "react";
 
 type BaseContainerProps = {
@@ -15,7 +15,8 @@ const BaseContainer = ({
   return (
     <Component
       className={cn(
-        "mx-auto w-full max-w-[90rem] px-[1rem] sm:px-[2rem] lg:px-[3rem]",
+        "mx-auto w-full max-w-[90rem]",
+        "px-[1rem] sm:px-[2rem] lg:px-[3rem]",
         className
       )}
     >

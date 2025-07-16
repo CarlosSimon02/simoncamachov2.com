@@ -14,28 +14,28 @@ const HeroSection = ({ className }: HeroSectionProps) => {
     <ContentContainer
       className={cn(
         className,
-        "flex flex-col items-center justify-center gap-16 md:flex-row md:gap-12 lg:gap-16"
+        "flex flex-col items-center justify-between gap-16 md:flex-row md:gap-12 lg:gap-16"
       )}
     >
       <div className={cn("flex flex-col gap-5 md:gap-7 lg:gap-9")}>
         <div
           className={cn(
             "flex flex-col gap-3",
-            "after:bg-accent after:-bottom-4 after:h-1 after:w-12 after:rounded-full"
+            "after:bg-accent after:-bottom-4 after:h-1 after:w-12 after:rounded-full lg:after:mt-2"
           )}
         >
           <div className="flex items-center gap-1">
             <MapPin className="stroke-foreground-2 size-5" />
             <span>Pampanga, Philippines</span>
           </div>
-          <h1 className="font-montserrat text-accent text-[2.375rem] leading-none font-black md:text-5xl">
+          <h1 className="font-montserrat text-accent text-[2.375rem] leading-none font-black md:text-5xl lg:text-6xl">
             Simon Camacho
           </h1>
-          <h2 className="font-oswald text-foreground text-xl font-bold md:text-2xl">
+          <h2 className="font-oswald text-foreground text-xl font-bold md:text-2xl lg:text-3xl">
             Software Engineer
           </h2>
         </div>
-        <p className="max-w-[50ch] md:max-w-[36ch]">
+        <p className="max-w-[40ch] leading-[1.7] md:leading-[1.9] lg:max-w-[50ch]">
           I am a developer who enjoys learning and expanding knowledge in the
           field of web. I am also determined to create solutions that provide
           excellent online experiences. Explore my portfolio to see my growing

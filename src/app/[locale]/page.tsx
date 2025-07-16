@@ -1,4 +1,5 @@
 import ContentNumberSpy from "@/components/organisms/ContentNumberSpy";
+import { styles } from "../utils";
 import AboutSection from "./_components/AboutSection";
 import ConnectSection from "./_components/ConnectSection";
 import ExperienceSection from "./_components/ExperienceSection";
@@ -9,7 +10,7 @@ const Home = () => {
   return (
     <div>
       <ContentNumberSpy />
-      <HeroSection className="h-auto min-h-[calc(100vh-2.75rem)] py-14 md:min-h-[calc(100vh-3.5rem)] md:py-20 lg:min-h-[calc(100vh-4rem)]" />
+      <HeroSection className={styles.layoutHeights.heroSection} />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />

@@ -1,12 +1,11 @@
 import TailwindScreenIndicator from "@/components/atoms/TailwindIndicator";
+import Header from "@/components/Header";
 import Background from "@/components/organisms/Background";
-import Header from "@/components/organisms/Header";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { Montserrat, Oswald } from "next/font/google";
-import localFont from "next/font/local";
+import { Lexend, Montserrat, Oswald } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 
@@ -20,60 +19,9 @@ const oswald = Oswald({
   subsets: ["latin"],
 });
 
-const satoshi = localFont({
-  src: [
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-LightItalic.otf",
-      weight: "300",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Italic.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-MediumItalic.otf",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-BoldItalic.otf",
-      weight: "700",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-Black.otf",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/satoshi/Satoshi-BlackItalic.otf",
-      weight: "900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-satoshi",
+const lexend = Lexend({
+  variable: "--font-lexend",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -95,7 +43,7 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} ${oswald.variable} ${satoshi.variable} antialiased`}
+        className={`${montserrat.variable} ${oswald.variable} ${lexend.variable} antialiased`}
       >
         <NextIntlClientProvider>
           <ThemeProvider
