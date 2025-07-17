@@ -12,11 +12,14 @@ const ThemeToggle = () => {
 
   return (
     <GhostButton onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      <MoonIcon className="block size-6 dark:hidden" />
-      <SunIcon className="hidden size-6 dark:block" />
-      <span className="sr-only">
-        {theme === "dark" ? t("lightMode") : t("darkMode")}
-      </span>
+      <div className="dark:hidden">
+        <MoonIcon className="block size-6" />
+        <span className="sr-only">{t("lightMode")}</span>
+      </div>
+      <div className="hidden dark:block">
+        <SunIcon className="block size-6" />
+        <span className="sr-only">{t("darkMode")}</span>
+      </div>
     </GhostButton>
   );
 };
