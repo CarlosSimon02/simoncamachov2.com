@@ -35,7 +35,7 @@ const HeroSection = ({ className }: HeroSectionProps) => {
             Software Engineer
           </h2>
         </div>
-        <p className="max-w-[40ch] leading-[1.7] md:leading-[1.9] lg:max-w-[50ch]">
+        <p className="max-w-[70ch] leading-[1.7] md:max-w-[40ch] md:leading-[1.9] lg:max-w-[50ch]">
           I am a developer who enjoys learning and expanding knowledge in the
           field of web. I am also determined to create solutions that provide
           excellent online experiences. Explore my portfolio to see my growing
