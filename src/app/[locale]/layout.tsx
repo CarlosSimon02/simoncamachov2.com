@@ -8,6 +8,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Lexend, Montserrat, Oswald } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import { cn } from "../utils";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -43,7 +44,10 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} ${oswald.variable} ${lexend.variable} antialiased`}
+        className={cn(
+          `${montserrat.variable} ${oswald.variable} ${lexend.variable} antialiased`,
+          "[&_*:focus-visible]:outline-accent [&_*:focus-visible]:outline-offset-3 [&_*:focus-visible]:outline-dashed"
+        )}
       >
         <NextIntlClientProvider>
           <ThemeProvider
