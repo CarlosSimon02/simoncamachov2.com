@@ -1,21 +1,23 @@
 "use client";
 
-import Moon from "@/app/assets/svgs/moon.svg";
-import Sun from "@/app/assets/svgs/sun.svg";
+import { SunIcon } from "@heroicons/react/24/outline";
+import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import GhostButton from "../GhostButton";
 
 const ThemeToggle = () => {
+  const t = useTranslations("common.themeToggle");
   const { setTheme, theme } = useTheme();
 
   return (
-    <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative"
-    >
-      <Moon className="stroke-foreground absolute size-6 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-      <Sun className="stroke-foreground size-6 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-      <span className="sr-only">Toggle theme</span>
-    </button>
+    <GhostButton onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+      <MoonIcon className="block size-6 dark:hidden" />
+      <SunIcon className="hidden size-6 dark:block" />
+      <span className="sr-only">
+        {theme === "dark" ? t("lightMode") : t("darkMode")}
+      </span>
+    </GhostButton>
   );
 };
 

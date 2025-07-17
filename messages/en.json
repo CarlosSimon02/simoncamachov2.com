@@ -19,7 +19,8 @@
       "label": "Choose Language"
     },
     "themeToggle": {
-      "label": "Toggle Dark Mode"
+      "darkMode": "Toggle Dark Mode",
+      "lightMode": "Toggle Light Mode"
     }
   }
 }

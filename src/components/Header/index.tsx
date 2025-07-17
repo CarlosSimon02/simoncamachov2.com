@@ -1,9 +1,9 @@
 import Hamburger from "@/app/assets/svgs/hamburger.svg";
 import { cn, styles } from "@/app/utils";
-import ThemeToggle from "@/components/atoms/ThemeToggle";
 import HeaderLogoLink from "./HeaderLogoLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Nav from "./Nav";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
