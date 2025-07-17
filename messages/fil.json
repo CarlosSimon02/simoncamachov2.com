@@ -19,7 +19,8 @@
       "label": "Pumili ng Wika"
     },
     "themeToggle": {
-      "label": "I-toggle ang Dark Mode"
+      "darkMode": "I-toggle ang Dark Mode",
+      "lightMode": "I-toggle ang Light Mode"
     }
   }
 }

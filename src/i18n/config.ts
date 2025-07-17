@@ -1,11 +1,16 @@
+import PHFlag from "@/app/assets/svgs/phFlag.svg";
+import USFlag from "@/app/assets/svgs/usFlag.svg";
+
 export const languages = [
   {
     name: "English",
     code: "en",
+    icon: USFlag,
   },
   {
     name: "Filipino",
     code: "fil",
+    icon: PHFlag,
   },
 ];
 
