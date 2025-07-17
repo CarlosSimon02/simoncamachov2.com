@@ -1,1 +1,25 @@
-{}
+{
+  "containers": {
+    "navBar": {
+      "controls": {
+        "toggle": "Ipakita/itago ang navigation menu"
+      },
+      "links": {
+        "home": "Bungad",
+        "about": "Tungkol",
+        "experience": "Karanasan",
+        "projects": "Proyekto",
+        "connect": "Kumonekta"
+      }
+    }
+  },
+  "common": {
+    "navigateToHome": "Pumunta sa Bungad",
+    "languageDropdown": {
+      "label": "Pumili ng Wika"
+    },
+    "themeToggle": {
+      "label": "I-toggle ang Dark Mode"
+    }
+  }
+}

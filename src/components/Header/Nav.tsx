@@ -1,5 +1,6 @@
 import { cn } from "@/app/utils/cn";
 import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 import GhostButton from "../GhostButton";
 
 type NavProps = {
@@ -7,37 +8,24 @@ type NavProps = {
 };
 
 const navItems = [
-  {
-    href: "/#home",
-    label: "Home",
-  },
-  {
-    href: "/#about",
-    label: "About",
-  },
-  {
-    href: "/#experience",
-    label: "Experience",
-  },
-  {
-    href: "/#projects",
-    label: "Projects",
-  },
-  {
-    href: "/#connect",
-    label: "Connect",
-  },
+  { href: "/#home", id: "home" },
+  { href: "/#about", id: "about" },
+  { href: "/#experience", id: "experience" },
+  { href: "/#projects", id: "projects" },
+  { href: "/#connect", id: "connect" },
 ];
 
-const Nav = ({ className }: NavProps) => {
+const Nav = async ({ className }: NavProps) => {
+  const t = await getTranslations("containers.navBar.links");
+
   return (
     <nav className={cn(className)} aria-label="Main">
       <ul className="flex items-center gap-3 md:gap-4 md:text-lg lg:gap-6">
-        {navItems.map(({ href, label }) => (
-          <li key={label}>
+        {navItems.map(({ href, id }) => (
+          <li key={id}>
             <GhostButton asChild color="secondary" className="font-oswald">
               <Link href={href}>
-                <span>{label}</span>
+                <span>{t(id)}</span>
               </Link>
             </GhostButton>
           </li>
