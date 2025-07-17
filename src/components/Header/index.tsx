@@ -2,8 +2,8 @@ import Hamburger from "@/app/assets/svgs/hamburger.svg";
 import { cn, styles } from "@/app/utils";
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
 import ThemeToggle from "@/components/atoms/ThemeToggle";
-import Nav from "../molecules/Nav";
 import HeaderLogoLink from "./HeaderLogoLink";
+import Nav from "./Nav";
 
 const Header = () => {
   return (

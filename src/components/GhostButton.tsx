@@ -2,13 +2,6 @@ import { cn } from "@/app/utils";
 import { Slot } from "@radix-ui/react-slot";
 import React from "react";
 
-type GhostButtonProps = React.ComponentProps<"button"> & {
-  asChild?: boolean;
-  hoverDirection?: "up" | "bottom" | "left" | "right";
-  hoverColor?: "accent";
-  color?: "primary";
-};
-
 const hoverDirectionMap = {
   up: "[&>*]:bottom-0 [&>*]:group-hover:bottom-1",
   bottom: "[&>*]:top-0 [&>*]:group-hover:top-1",
@@ -18,10 +11,18 @@ const hoverDirectionMap = {
 
 const hoverColorMap = {
   accent: "[&>*]:group-hover:text-accent",
-};
+} as const;
 
 const colorMap = {
   primary: "[&>*]:text-foreground",
+  secondary: "[&>*]:text-foreground-2",
+} as const;
+
+type GhostButtonProps = React.ComponentProps<"button"> & {
+  asChild?: boolean;
+  hoverDirection?: keyof typeof hoverDirectionMap;
+  hoverColor?: keyof typeof hoverColorMap;
+  color?: keyof typeof colorMap;
 };
 
 const GhostButton = ({
