@@ -53,7 +53,10 @@ const projects = [
 
 const HeroSection = ({ className }: HeroSectionProps) => {
   return (
-    <ContentContainer className={cn(className, "flex flex-col gap-7")}>
+    <ContentContainer
+      sectionId="projects"
+      className={cn(className, "flex flex-col gap-7")}
+    >
       <SectionTitle title="Projects" number={3} />
       <div
         className={cn(

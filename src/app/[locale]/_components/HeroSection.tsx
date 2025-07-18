@@ -12,6 +12,7 @@ type HeroSectionProps = {
 const HeroSection = ({ className }: HeroSectionProps) => {
   return (
     <ContentContainer
+      sectionId="home"
       className={cn(
         className,
         "flex flex-col items-center justify-between gap-16 md:flex-row md:gap-12 lg:gap-16"

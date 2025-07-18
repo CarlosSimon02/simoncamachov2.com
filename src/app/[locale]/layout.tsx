@@ -2,6 +2,7 @@ import TailwindScreenIndicator from "@/components/atoms/TailwindIndicator";
 import Header from "@/components/Header";
 import Background from "@/components/organisms/Background";
 import { routing } from "@/i18n/routing";
+import { SectionVisibilityProvider } from "@/providers/SectionVisibilityProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -56,10 +57,12 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
             enableSystem
             disableTransitionOnChange
           >
-            <Background />
-            <Header />
-            {children}
-            <TailwindScreenIndicator />
+            <SectionVisibilityProvider>
+              <Background />
+              <Header />
+              {children}
+              <TailwindScreenIndicator />
+            </SectionVisibilityProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

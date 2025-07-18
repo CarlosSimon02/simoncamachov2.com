@@ -98,6 +98,7 @@ type HeroSectionProps = {
 const HeroSection = ({ className }: HeroSectionProps) => {
   return (
     <ContentContainer
+      sectionId="about"
       className={cn(className, "flex flex-col gap-7 md:gap-12")}
     >
       <SectionTitle title="About Me" number={1} />
