@@ -1,15 +1,15 @@
 import WebsiteLogo from "@/app/assets/svgs/websiteLogo.svg";
 import { cn } from "@/app/utils";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import GhostButton from "../GhostButton";
 
 type HeaderLogoLinkProps = {
   className?: string;
 };
 
-const HeaderLogoLink = async ({ className }: HeaderLogoLinkProps) => {
-  const t = await getTranslations("common");
+const HeaderLogoLink = ({ className }: HeaderLogoLinkProps) => {
+  const t = useTranslations("common");
 
   return (
     <div className={cn("relative flex items-center justify-center", className)}>
