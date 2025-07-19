@@ -15,7 +15,7 @@ const HeaderLogoLink = async ({ className }: HeaderLogoLinkProps) => {
     <div className={cn("relative flex items-center justify-center", className)}>
       <GhostButton asChild>
         <Link href="/">
-          <WebsiteLogo className="size-8 fill-current md:size-10" />
+          <WebsiteLogo className="fill-accent size-8 md:size-10" />
           <span className="sr-only">{t("navigateToHome")}</span>
         </Link>
       </GhostButton>
