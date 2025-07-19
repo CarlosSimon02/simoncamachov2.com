@@ -13,7 +13,6 @@ const HeaderLogoLink = async ({ className }: HeaderLogoLinkProps) => {
 
   return (
     <div className={cn("relative flex items-center justify-center", className)}>
-      <div className="bg-foreground absolute top-0 -right-4 -z-10 h-[105%] w-[105%] opacity-[4%] dark:opacity-[4%]" />
       <GhostButton asChild>
         <Link href="/">
           <WebsiteLogo className="size-8 fill-current md:size-10" />

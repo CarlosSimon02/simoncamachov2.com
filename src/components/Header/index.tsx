@@ -5,9 +5,13 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import Nav from "./Nav";
 import ThemeToggle from "./ThemeToggle";
 
-const Header = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+const Header = ({ className }: HeaderProps) => {
   return (
-    <header>
+    <header className={cn(className)}>
       <div
         className={cn(
           styles.container.base,

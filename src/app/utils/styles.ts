@@ -12,8 +12,8 @@ export const container = {
 };
 
 export const layoutHeights = {
-  header: cn("h-[3.5rem] md:h-[4.5rem] lg:h-[5.5rem]"),
+  header: cn("h-[3.5rem] md:h-[4.5rem] lg:h-[5rem]"),
   heroSection: cn(
-    "h-auto min-h-[calc(100vh-3.5rem)] py-14 md:min-h-[calc(100vh-4.5rem)] md:py-20 lg:min-h-[calc(100vh-5.5rem)]"
+    "h-auto min-h-[calc(100vh-3.5rem)] py-14 md:min-h-[calc(100vh-4.5rem)] md:py-20 lg:min-h-[calc(100vh-5rem)]"
   ),
 };

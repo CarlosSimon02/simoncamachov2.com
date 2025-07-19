@@ -46,7 +46,7 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          `${montserrat.variable} ${oswald.variable} ${lexend.variable} antialiased`,
+          `${montserrat.variable} ${oswald.variable} ${lexend.variable} relative antialiased`,
           "[&_*:focus-visible]:outline-accent [&_*:focus-visible]:outline-offset-3 [&_*:focus-visible]:outline-dashed"
         )}
       >
@@ -59,7 +59,7 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
           >
             <SectionVisibilityProvider>
               <Background />
-              <Header />
+              <Header className="sticky top-0 z-10" />
               {children}
               <TailwindScreenIndicator />
             </SectionVisibilityProvider>

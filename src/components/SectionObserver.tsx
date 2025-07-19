@@ -39,6 +39,7 @@ const SectionObserver = ({
     <div
       ref={ref}
       data-section-id={sectionId}
+      id={sectionId}
       className="absolute inset-0 -z-99"
     />
   );
